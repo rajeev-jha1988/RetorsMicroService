@@ -22,6 +22,7 @@ public class Dat01aSalesDaoImpl extends UnivDAOAbstractImpl<Dat01aSales,String> 
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	
 	@Autowired
 	private EntityManager entityManager;
 	

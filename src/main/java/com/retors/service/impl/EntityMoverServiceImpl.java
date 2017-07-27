@@ -46,4 +46,10 @@ public class EntityMoverServiceImpl implements EntityMoverService {
 		mdt02EntityDao.createRecord(mdt02Entity);
 	}
 
+	@Override
+	public Mdt01Sales findMdtSales(String id) {
+		Mdt01Sales mdt01Sales= mdt01SalesDao.findByPrimaryKey(id);
+		return mdt01Sales;
+	}
+
 }

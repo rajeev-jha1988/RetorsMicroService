@@ -9,7 +9,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<spring.version>4.2.0.RELEASE</spring.version>
 		<jackson.version>1.9.10</jackson.version>
-		<hibernate.version>4.3.11.Final</hibernate.version>
+		<hibernate.version>5.2.9.Final</hibernate.version>
 		<spring.security.version>4.0.2.RELEASE</spring.security.version>
 	</properties>
 
@@ -90,32 +90,27 @@
 			<artifactId>poi-ooxml</artifactId>
 			<version>3.16</version>
 		</dependency>
-				<!-- https://mvnrepository.com/artifact/oracle/ojdbc6 -->
+		<!-- https://mvnrepository.com/artifact/oracle/ojdbc6 -->
 		<!-- https://mvnrepository.com/artifact/oracle/ojdbc14 -->
-			<!-- https://mvnrepository.com/artifact/com.oracle/ojdbc14 -->
-			 <!-- mvn install:install-file -Dfile=E:\oraclejdbcjar\ojdbc6.jar  -DgroupId=com.oracle -DartifactId=ojdbc6 
-			 -Dversion=11.2.0 -Dpackaging=jar -->
- 		<dependency>
-            <groupId>com.oracle</groupId>
-            <artifactId>ojdbc6</artifactId>
-            <version>11.2.0</version>
-        </dependency>
-			<dependency>
+		<!-- https://mvnrepository.com/artifact/com.oracle/ojdbc14 -->
+		<!-- mvn install:install-file -Dfile=E:\oraclejdbcjar\ojdbc6.jar -DgroupId=com.oracle 
+			-DartifactId=ojdbc6 -Dversion=11.2.0 -Dpackaging=jar -->
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc6</artifactId>
+			<version>11.2.0</version>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
 			<version>4.3.9.RELEASE</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/commons-dbcp/commons-dbcp -->
-<dependency>
-    <groupId>commons-dbcp</groupId>
-    <artifactId>commons-dbcp</artifactId>
-    <version>1.4</version>
-</dependency>
-		
-
-		
-
-
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.4</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>

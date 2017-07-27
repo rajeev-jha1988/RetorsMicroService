@@ -7,8 +7,8 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 
-import org.hibernate.Query;
 import org.hibernate.Session;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.retors.dao.UnivDAO;
@@ -81,7 +81,7 @@ public abstract class UnivDAOAbstractImpl<T, E extends Serializable> implements	
 	public List<T> findAll(int fetchSize, int fetchCount)  {
 		List<T> returnList = new ArrayList<T>();
 		Session session = getEntityManager().unwrap(Session.class);
-		Query managerQuery = session.createQuery("from " + getModelClass().getSimpleName() + "t");
+		Query<T> managerQuery = session.createQuery("from " + getModelClass().getSimpleName() + "t");
 		managerQuery.setMaxResults(fetchSize);
 		managerQuery.setFirstResult(fetchSize * fetchCount);
 		returnList = managerQuery.list();

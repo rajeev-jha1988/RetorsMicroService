@@ -5,6 +5,7 @@ package com.retors.dao.impl;
 
 import javax.persistence.EntityManager;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.retors.dao.Mdt01SalesDao;
@@ -18,6 +19,7 @@ import com.retors.model.Mdt01Sales;
 public class Mdt01SalesDaoImpl extends UnivDAOAbstractImpl<Mdt01Sales, String> implements Mdt01SalesDao {
 	
 	private static final long serialVersionUID = 1L;
+	@Autowired
 	private EntityManager entityManger;
 	
 	@Override
