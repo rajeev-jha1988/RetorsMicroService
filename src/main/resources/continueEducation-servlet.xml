@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:p="http://www.springframework.org/schema/p"
+
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/tx 
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+       ">
+       
+        
+	<mvc:annotation-driven />
+	<context:component-scan base-package="com.vrisk.contEd.*" />
+	<context:component-scan base-package="com.vrisk.contEd.controller" />
+	
+	
+	
+	<!-- hibernate configartion 
+	-->
+	
+	<beans:bean id="dozerBean" class="org.dozer.DozerBeanMapper">
+		<beans:property name="mappingFiles">
+			<beans:list>
+				<beans:value>dozer-bean-mappings.xml</beans:value>
+			</beans:list>
+		</beans:property>
+	
+	</beans:bean>
+	
+	<beans:bean id="dataSource"
+		class="org.springframework.jndi.JndiObjectFactoryBean">
+
+		<beans:property name="jndiName" value="java:comp/env/jdbc/ContinueEducationDataSource" />
+	
+	</beans:bean>
+
+	<beans:bean id="entityManagerFactory"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<beans:property name="dataSource" ref="dataSource" />
+		<beans:property name="packagesToScan" value="com.vrisk.contEd.model" />
+		<beans:property name="jpaVendorAdapter" >
+			  <beans:bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
+		</beans:property>
+		<beans:property name="jpaProperties">
+			<beans:props>
+ 		 	<!--  <beans:property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />  -->
+		
+				 <beans:prop key="hibernate.dialect">org.hibernate.dialect.SQLServerDialect
+				</beans:prop> 
+				<beans:prop key="hibernate.show_sql">true</beans:prop>
+				<beans:prop key="hibernate.hbm2ddl.auto">none</beans:prop>
+			</beans:props>
+		</beans:property>
+	</beans:bean>
+
+	<beans:bean id="entityManager"
+		class="org.springframework.orm.jpa.support.SharedEntityManagerBean">
+		<beans:property name="entityManagerFactory" ref="entityManagerFactory" />
+	</beans:bean>
+<!-- end hibernate -->
+
+	<beans:bean id="transactionManager"
+		class="org.springframework.orm.jpa.JpaTransactionManager">
+		<beans:property name="entityManagerFactory" ref="entityManagerFactory" />
+	</beans:bean>
+	
+	<tx:annotation-driven />
+		
+	<beans:bean name="corsBean" class="com.vrisk.contEd.util.CORSFilter" />
+	<beans:bean id="restTemplate" class="org.springframework.web.client.RestTemplate" />
+	
+
+	
+	
+	
+</beans:beans>
