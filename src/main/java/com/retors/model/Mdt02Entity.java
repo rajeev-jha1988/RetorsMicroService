@@ -168,9 +168,13 @@ public class Mdt02Entity implements Serializable {
         return true;
     }
 
-    @Override
-    public String toString() {
-        return "com.raj.micro.model.Mdt02Entity[ entityId=" + entityId + " ]";
-    }
+	@Override
+	public String toString() {
+		return "Mdt02Entity [entityId=" + entityId + ", ein=" + ein + ", entityName=" + entityName + ", entityType="
+				+ entityType + ", externalEntityYN=" + externalEntityYN + ", fiscalYearId=" + fiscalYearId
+				+ ", tenantId=" + tenantId + ", updatedBy=" + updatedBy + ", updateDate=" + updateDate + "]";
+	}
+
+    
     
 }

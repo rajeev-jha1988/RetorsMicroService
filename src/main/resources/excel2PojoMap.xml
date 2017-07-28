@@ -1,19 +1,68 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <workbook>
-	<worksheet name="Sheet1">
+	<worksheet name="DAT_01A_SALES">
 		<section startRow="0" endRow="0" />
 		<loop startRow="1" endRow="1" items="dat01aSales" var="dat01aSale"
 			varType="com.retors.model.Dat01aSales">
 			<section startRow="1" endRow="1">
 				<mapping row="1" col="0">dat01aSale.salesDataId</mapping>
 				<mapping row="1" col="1">dat01aSale.factor</mapping>
-				<mapping row="1" col="2">dat01aSale.sports</mapping>
-				<mapping row="1" col="3">dat01aSale.country</mapping>
-				<mapping row="1" col="4">dat01aSale.country</mapping>
-				<mapping row="1" col="5">dat01aSale.country</mapping>
-				<mapping row="1" col="6">dat01aSale.country</mapping>
-				<mapping row="1" col="7">dat01aSale.country</mapping>
-				<mapping row="1" col="8">dat01aSale.country</mapping>
+				<mapping row="1" col="2">dat01aSale.factorCategory</mapping>
+				<mapping row="1" col="3">dat01aSale.categoryDesc</mapping>
+				<mapping row="1" col="4">dat01aSale.entityId</mapping>
+				<mapping row="1" col="5">dat01aSale.jurisdiction</mapping>
+				<mapping row="1" col="6">dat01aSale.begBal</mapping>
+				<mapping row="1" col="7">dat01aSale.endBal</mapping>
+				<mapping row="1" col="8">dat01aSale.sourceSystem</mapping>
+				<mapping row="1" col="9">dat01aSale.accountType</mapping>
+				<mapping row="1" col="10">dat01aSale.fiscalYearId</mapping>
+				<mapping row="1" col="11">dat01aSale.scenarioId</mapping>
+				<mapping row="1" col="12">dat01aSale.tenantId</mapping>
+				<mapping row="1" col="13">dat01aSale.updatedBy</mapping>
+				<mapping row="1" col="14">dat01aSale.updateDate</mapping>
+				<mapping row="1" col="15">dat01aSale.remark</mapping>
+			</section>
+			<loopbreakcondition>
+				<rowcheck offset="0">
+					<cellcheck offset="0" />
+				</rowcheck>
+			</loopbreakcondition>
+		</loop>
+	</worksheet>
+	<worksheet name="MDT_02_ENTITY">
+		<section startRow="0" endRow="0" />
+		<loop startRow="1" endRow="1" items="mdt02Entities" var="mdt02Entity"
+			varType="com.retors.model.Mdt02Entity">
+			<section startRow="1" endRow="1">
+				<mapping row="1" col="0">mdt02Entity.entityId</mapping>
+				<mapping row="1" col="1">mdt02Entity.ein</mapping>
+				<mapping row="1" col="2">mdt02Entity.entityName</mapping>
+				<mapping row="1" col="3">mdt02Entity.entityType</mapping>
+				<mapping row="1" col="4">mdt02Entity.externalEntityYN</mapping>
+				<mapping row="1" col="5">mdt02Entity.fiscalYearId</mapping>
+				<mapping row="1" col="6">mdt02Entity.tenantId</mapping>
+				<mapping row="1" col="7">mdt02Entity.updatedBy</mapping>
+				<mapping row="1" col="8">mdt02Entity.updateDate</mapping>
+			</section>
+			<loopbreakcondition>
+				<rowcheck offset="0">
+					<cellcheck offset="0" />
+				</rowcheck>
+			</loopbreakcondition>
+		</loop>
+	</worksheet>
+	<worksheet name="MDT_01_SALES">
+		<section startRow="0" endRow="0" />
+		<loop startRow="1" endRow="1" items="mdt01Sales" var="mdt01Sale"
+			varType="com.retors.model.Mdt01Sales">
+			<section startRow="1" endRow="1">
+				<mapping row="1" col="0">mdt01Sale.salesCategoryId</mapping>
+				<mapping row="1" col="1">mdt01Sale.factorName</mapping>
+				<mapping row="1" col="2">mdt01Sale.factorCatDesc</mapping>
+				<mapping row="1" col="3">mdt01Sale.fiscalYearId</mapping>
+				<mapping row="1" col="4">mdt01Sale.tenantId</mapping>
+				<mapping row="1" col="5">mdt01Sale.updatedBy</mapping>
+				<mapping row="1" col="6">mdt01Sale.updateDate</mapping>
 			</section>
 			<loopbreakcondition>
 				<rowcheck offset="0">

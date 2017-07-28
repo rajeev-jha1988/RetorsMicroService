@@ -144,9 +144,13 @@ public class Mdt01Sales implements Serializable {
         return true;
     }
 
-    @Override
-    public String toString() {
-        return "com.raj.micro.model.Mdt01Sales[ salesCategoryId=" + salesCategoryId + " ]";
-    }
+	@Override
+	public String toString() {
+		return "Mdt01Sales [salesCategoryId=" + salesCategoryId + ", factorName=" + factorName + ", factorCatDesc="
+				+ factorCatDesc + ", fiscalYearId=" + fiscalYearId + ", tenantId=" + tenantId + ", updatedBy="
+				+ updatedBy + ", updateDate=" + updateDate + "]";
+	}
+
+   
     
 }

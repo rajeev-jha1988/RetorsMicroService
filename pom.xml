@@ -68,30 +68,6 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 			<version>1.5.3.RELEASE</version>
 		</dependency>
-		<dependency>
-			<groupId>io.springfox</groupId>
-			<artifactId>springfox-swagger2</artifactId>
-			<version>2.2.2</version>
-		</dependency>
-		<dependency>
-			<groupId>io.springfox</groupId>
-			<artifactId>springfox-swagger-ui</artifactId>
-			<version>2.2.2</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi</artifactId>
-			<version>3.16</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi-ooxml</artifactId>
-			<version>3.16</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/oracle/ojdbc6 -->
-		<!-- https://mvnrepository.com/artifact/oracle/ojdbc14 -->
 		<!-- https://mvnrepository.com/artifact/com.oracle/ojdbc14 -->
 		<!-- mvn install:install-file -Dfile=E:\oraclejdbcjar\ojdbc6.jar -DgroupId=com.oracle 
 			-DartifactId=ojdbc6 -Dversion=11.2.0 -Dpackaging=jar -->

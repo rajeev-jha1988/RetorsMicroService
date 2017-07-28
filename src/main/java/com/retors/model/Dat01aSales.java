@@ -252,9 +252,15 @@ public class Dat01aSales implements Serializable {
         return true;
     }
 
-    @Override
-    public String toString() {
-        return "com.raj.micro.model.Dat01aSales[ salesDataId=" + salesDataId + " ]";
-    }
+	@Override
+	public String toString() {
+		return "Dat01aSales [salesDataId=" + salesDataId + ", factor=" + factor + ", factorCategory=" + factorCategory
+				+ ", categoryDesc=" + categoryDesc + ", entityId=" + entityId + ", jurisdiction=" + jurisdiction
+				+ ", begBal=" + begBal + ", endBal=" + endBal + ", sourceSystem=" + sourceSystem + ", accountType="
+				+ accountType + ", fiscalYearId=" + fiscalYearId + ", scenarioId=" + scenarioId + ", tenantId="
+				+ tenantId + ", updatedBy=" + updatedBy + ", updateDate=" + updateDate + ", remark=" + remark + "]";
+	}
+
+   
     
 }

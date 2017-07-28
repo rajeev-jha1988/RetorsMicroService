@@ -52,6 +52,9 @@ public class HibernateJpaConfig {
     
     @Value("${datasource.showSql}")
     private String showSql;
+    
+    @Value("${datasource.batch_size}")
+    private int batch_size;
  
     
  
@@ -101,6 +104,7 @@ public class HibernateJpaConfig {
     	properties.put("hibernate.dialect", hibernateDailect);
     	properties.put("hibernate.hbm2ddl.auto", hbm2ddl);
     	properties.put("hibernate.show_sql", showSql);
+    	properties.put("hibernate.jdbc.batch_size", batch_size);
     	return properties;
     }
  
