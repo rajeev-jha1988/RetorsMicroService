@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<workbook>
+	<worksheet name="Sheet1">
+		<section startRow="0" endRow="0" />
+		<loop startRow="1" endRow="1" items="dat01aSales" var="dat01aSale"
+			varType="com.retors.model.Dat01aSales">
+			<section startRow="1" endRow="1">
+				<mapping row="1" col="0">dat01aSale.salesDataId</mapping>
+				<mapping row="1" col="1">dat01aSale.factor</mapping>
+				<mapping row="1" col="2">dat01aSale.sports</mapping>
+				<mapping row="1" col="3">dat01aSale.country</mapping>
+				<mapping row="1" col="4">dat01aSale.country</mapping>
+				<mapping row="1" col="5">dat01aSale.country</mapping>
+				<mapping row="1" col="6">dat01aSale.country</mapping>
+				<mapping row="1" col="7">dat01aSale.country</mapping>
+				<mapping row="1" col="8">dat01aSale.country</mapping>
+			</section>
+			<loopbreakcondition>
+				<rowcheck offset="0">
+					<cellcheck offset="0" />
+				</rowcheck>
+			</loopbreakcondition>
+		</loop>
+	</worksheet>
+</workbook>

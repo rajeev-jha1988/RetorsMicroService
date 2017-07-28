@@ -75,7 +75,7 @@ public class ApplicationController {
 										String fieldName= colMapByName.get(cell.getColumnIndex());
 										Character firstLetter=fieldName.charAt(0);
 										String method= fieldName.substring(1, fieldName.length());
-										String methodName="set"+firstLetter+method;
+										String methodName="set"+firstLetter.toString().toUpperCase()+method;
 										System.out.println(methodName);
 										Method setterMethod= c.getMethod(methodName,String.class );
 										setterMethod.invoke(object, String.valueOf(cell.getNumericCellValue()));
@@ -83,7 +83,7 @@ public class ApplicationController {
 										String fieldName= colMapByName.get(cell.getColumnIndex());
 										Character firstLetter=fieldName.charAt(0);
 										String method= fieldName.substring(1, fieldName.length());
-										String methodName="set"+firstLetter+method;
+										String methodName="set"+firstLetter.toString().toUpperCase()+method;
 										System.out.println(methodName);
 										Method setterMethod= c.getMethod(methodName,String.class );
 										setterMethod.invoke(object, String.valueOf(cell.getBooleanCellValue()));
@@ -91,7 +91,7 @@ public class ApplicationController {
 										String fieldName= colMapByName.get(cell.getColumnIndex());
 										Character firstLetter=fieldName.charAt(0);
 										String method= fieldName.substring(1, fieldName.length());
-										String methodName="set"+firstLetter+method;
+										String methodName="set"+firstLetter.toString().toUpperCase()+method;
 										System.out.println(methodName);
 										Method setterMethod= c.getMethod(methodName,String.class );
 										setterMethod.invoke(object, String.valueOf(cell.getStringCellValue()));
